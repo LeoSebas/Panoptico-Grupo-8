@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../icons/favicon.ico">
+
+    <title>Panóptico - Detalles de cliente</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../../js/jquery.js"></script>
+
+    <script src="../../../../js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../css/carousel.css" rel="stylesheet">
+    <link href="../../../../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/index.css">
+    <link rel="stylesheet" href="../../../../css/dashboard.css" type="text/css"/>
+
+
+  </head>
+<body>
+    <!-- Preloader-->
+    <div id="preloader"></div>
+    <!-- Preloader-->
+    <div id="dialog-presup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a data-dismiss="modal" class="close">×</a>
+                    <h3>Turno para visita de presupuesto</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Datos de cliente</h4>
+                    <div class="form-inline">
+                        <p><strong>Cliente:</strong> Juan Pérez</p>
+                        <p><strong>DNI:</strong> 323232323</p>
+                    </div>
+                    <form class="form-horizontal">
+                        <h4 class="page-header">Dirección</h4>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="calle-cliente" class="col-lg-2 control-label">Calle:</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control col-lg-4" id="calle-cliente" type="text" value="Av. sarmiento">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="nro-cal-cliente" class="col-lg-4 control-label">Nro:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" id="nro-cal-cliente" type="text" value="993">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="piso-cliente" class="col-lg-4 control-label">Piso:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" id="piso-cliente" type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="dpto-cliente" class="col-lg-4 control-label">Dpto:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" id="dpto-cliente" type="text" value="4">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <h4>Datos de servicio</h4>
+                    <h3 class="page-header">Servicio</h3>
+                    <form action="action">
+                        <div class="form-inline">
+                            <label for="lvl-serv">Servicio:</label>
+                            <select class="form-control" name="listaserv" id="lvl-serv">
+                                <option class="list-group-item" value="">Sin especificar</option>
+                                <option class="list-group-item" value="">Básico</option>
+                                <option class="list-group-item" value="">Estándar</option>
+                                <option class="list-group-item" value="">Premium</option>
+                            </select>
+                        </div>
+                    </form>
+                    <h3>Fecha y lugar de visita</h3>
+                    <div class="input-group date" id="calendario" data-date-format="dd-mm-yyyy hh-ii">
+                        <input type='text' class="form-control" value="28-06-2017 18-30" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    <p class="help-block">Utilise el calendario para seleccionar los dias y horarios disponibles.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="turnos - presupuestos.html" class="btn btn-success">Confirmar turno</a>
+                    <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dialog-cons" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a data-dismiss="modal" class="close">×</a>
+                    <h3>Solicitar consulta</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Datos de consulta</h4>
+                    <form action="action">
+                        <div class="form-inline">
+                            <label for="lvl-serv">Tipo:</label>
+                            <select class="form-control" name="listaserv" id="lvl-serv">
+                                <option class="list-group-item" value="">Técnica</option>
+                                <option class="list-group-item" value="">Administrativa</option>
+                            </select>
+                        </div>
+                    </form>
+                    <h4>Fecha de turno</h4>
+                    <div class="input-group date" id="calendario" data-date-format="dd-mm-yyyy hh-ii">
+                        <input type='text' class="form-control" value="28-06-2017 18-30" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    <p class="help-block">Utilise el calendario para seleccionar los dias y horarios disponibles.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="turnos - consultas.html" class="btn btn-success">Confirmar turno</a>
+                    <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Barra de navegación superior-->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div id="empresa">
+                            <img src="../../../../img/logo.png" class=" navbar-brand img-thumbnail" style="background:none;border:none" alt="Alternate Text" />
+                            <a class="navbar-brand" href="../index.html">Panoptico</a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navigation-login">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="../../../login.html" class="">Cerrar sesion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- /Barra de navegacion superior-->
+    
+    <!-- Contenedor-->
+    <div class="container-fluid">
+    <div class="row"> 
+        <!-- Barra de navegación lateral-->
+        <nav role="navigation" id="sidebar-opc" class="navbar-default col-sm-3 col-md-2">
+            <div role="navigation" class="sidebar-collapse" aria-expanded="false">
+                <ul id="main-menu" class="nav nav-sidebar">
+                    <li class="user-img">
+                        <img class="img-circle" alt="User image" width="100" height="100" src="../../../../Img/Users/default.png">
+                        <h4 class="text-center">Mario López</h4>
+                        <h4 class="text-center">(At. al cliente)</h4>
+                    </li>
+                    <li class=""><a href="../index.html">Inicio</a></li>
+                    <li class="active"><a href="../Clientes.html">Clientes</a></li>
+                    <li><hr/></li>
+                    <li><h4 class="text-center">Juan Pérez</h4></li>
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Turnos <span class="caret"></span></a>
+                        <ul class="nav nav-sidebar" style="margin-left:15px">
+                            <li><a href="turnos - presupuestos.html">Presupuestos</a></li>
+                            <li><a href="turnos - instalaciones.html">Instalaciones</a></li>
+                            <li><a href="turnos - consultas.html">Consultas</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="Emergencia.html">Emergencias</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Barra de navegación lateral-->
+        <!-- Contenedor lateral-->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <ol class="breadcrumb">
+                <li class="active">Inicio</li>
+            </ol>
+            <div class="">
+                <h2 class="page-header">Cliente Sr. Juan Perez. <span class="text-muted">(Cliente estándar)</span></h2>
+            </div>
+            <h3 class="sub-header">Acceso rápido:</h3>
+            <div style="padding-left: 20px;padding-top:20px" class="col-lg-6 col-md-6">
+                <h4 class="sub-header">Detalles del Cliente</h4>
+                <form style="margin-left: 20px" class="form">
+                    <div class="form-group">
+                        <label for="tipo-text">Nombre:</label>
+                        <text id="tipo-text">Juan Perez</text>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado-text">DNI:</label>
+                        <text id="estado-text">32546564</text>
+                    </div>
+                    <div class="form-group">
+                        <label for="dir-text">Direccción:</label>
+                        <text id="dir-text">Av Sarmiento 993 piso 1 dpto 4</text>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-text">Email:</label>
+                        <text id="email-text">juanperez@mail.com</text>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-text">Telefono:</label>
+                        <text id="tel-text">3232-323232</text>
+                    </div>
+                </form>
+                <div class="featurette-divider"></div>
+                <h4 class="sub-header">Detalles de cuenta</h4>
+                <form style="margin-left: 20px" class="form">
+                    <div class="form-group alert alert-success">
+                        <label for="est-cuenta-text">Estado:</label>
+                        <text id="est-cuenta-text">Al día</text>
+                    </div>
+                    <div class="form-group alert alert-success">
+                        <label for="M-Imp-text">Meses impagos:</label>
+                        <text id="M-Imp-text">0</text>
+                    </div>
+                    <div class="form-group alert alert-info">
+                        <label for="M-Pag-text">Meses pagos:</label>
+                        <text id="M-Pag-text">23</text>
+                    </div>
+                    <div class="form-group alert alert-info">
+                        <label for="Serv-text">Servicios contratados:</label>
+                        <ul id="Serv-text" style="margin-left: 20px" class="list-group">
+                            <li>Estandar</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div style="padding-top: 20px;" class="col-lg-6 col-md-6">
+                <h4 class="sub-header">Acciones rápidas</h4>
+                <div class="row placeholders">
+                    <a data-toggle="modal" href="#dialog-presup" class="btn btn-lg btn-primary col-xs-10 col-xs-push-1 col-sm-5 col-md-12 col-lg-10 col-lg-push-1 opc-cliente">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        <p class="">Solicitar presupuesto</p>
+                    </a>
+                    <a data-toggle="modal" href="#dialog-cons" class=" btn btn-lg btn-primary col-xs-10 col-xs-push-1 col-sm-5 col-md-12 col-lg-10 col-lg-push-1 opc-cliente">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        <p class="">Solicitar consulta</p>
+                    </a>
+                    <a class="btn btn-lg btn-primary col-xs-10 col-xs-push-1 col-sm-5 col-md-12 col-lg-10 col-lg-push-1 opc-cliente">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <p class="">Agregar opinión</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Contenedor lateral-->
+   
+
+
+      <!-- FOOTER -->
+      <footer class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="../../../../js/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../js/jquery-ui.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../../js/index.js"></script>
+    <script src="../../../../js/custom.js"></script>
+    <script src="../../../../js/jquery.metisMenu.js"></script>
+    <script src="../../../../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

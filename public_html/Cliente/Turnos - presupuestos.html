@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../icons/favicon.ico">
+
+    <title>Panóptico - Inicio de atencion al cliente </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../js/jquery.js"></script>
+
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+      <link rel="stylesheet" href="../../css/bootstrap-datetimepicker.css" />
+    <link href="../../css/carousel.css" rel="stylesheet">
+    <link href="../../css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/index.css">
+    
+  </head>
+  <body>
+    <!-- Preloader-->
+    <div id="preloader"></div>
+    <!-- Preloader-->
+      <div id="dialog-presup" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <a data-dismiss="modal" class="close">×</a>
+                      <h3>Turno para visita de presupuesto</h3>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Datos de cliente</h4>
+                      <div class="form-inline">
+                          <p><strong>Cliente:</strong> Juan Pérez</p>
+                          <p><strong>DNI:</strong> 323232323</p>
+                      </div>
+                      <form class="form-horizontal">
+                          <h4 class="page-header">Dirección</h4>
+                          <div class="col-lg-12">
+                              <div class="form-group">
+                                  <label for="calle-cliente" class="col-lg-2 control-label">Calle:</label>
+                                  <div class="col-lg-10">
+                                      <input class="form-control col-lg-4" id="calle-cliente" type="text" value="Av. sarmiento">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-4">
+                              <div class="form-group">
+                                  <label for="nro-cal-cliente" class="col-lg-4 control-label">Nro:</label>
+                                  <div class="col-lg-8">
+                                      <input class="form-control" id="nro-cal-cliente" type="text" value="993">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-4">
+                              <div class="form-group">
+                                  <label for="piso-cliente" class="col-lg-4 control-label">Piso:</label>
+                                  <div class="col-lg-8">
+                                      <input class="form-control" id="piso-cliente" type="text" value="1">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-4">
+                              <div class="form-group">
+                                  <label for="dpto-cliente" class="col-lg-4 control-label">Dpto:</label>
+                                  <div class="col-lg-8">
+                                      <input class="form-control" id="dpto-cliente" type="text" value="4">
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                      <h4>Datos de servicio</h4>
+                      <h3 class="page-header">Servicio</h3>
+                      <form action="action">
+                          <div class="form-inline">
+                              <label for="lvl-serv">Servicio:</label>
+                              <select class="form-control" name="listaserv" id="lvl-serv">
+                                  <option class="list-group-item" value="">Sin especificar</option>
+                                  <option class="list-group-item" value="">Básico</option>
+                                  <option class="list-group-item" value="">Estándar</option>
+                                  <option class="list-group-item" value="">Premium</option>
+                              </select>
+                          </div>
+                      </form>
+                      <h3>Fecha y lugar de visita</h3>
+                      <div class="input-group date" id="calendario" data-date-format="dd-mm-yyyy hh-ii">
+                          <input type='text' class="form-control" value="28-06-2017 18-30" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                      <p class="help-block">Utilise el calendario para seleccionar los dias y horarios disponibles.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="turnos - presupuestos.html" class="btn btn-success">Confirmar turno</a>
+                      <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="dialog-detalles" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <a data-dismiss="modal" class="close">×</a>
+                      <h3>Detalles presupuesto</h3>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Datos de cliente</h4>
+                      <p><strong>Cliente:</strong> Juan Pérez</p>
+                      <p><strong>Direccion:</strong> Av Sarmiento 993 piso 1 dpto 4</p>
+                      <p><strong>Fecha de visita:</strong> 12-06-2017 23-30</p>
+                      <h4>Datos de tecnico</h4>
+                      <p><strong>Nombre:</strong> Jose Ramirez</p>
+                      <h4>Datos de servicio</h4>
+                      <p><strong>Servicio elegido:</strong> Estándar</p>
+                      <ul>
+                          <li>DVR DE 8 ENTRADAS</li>
+                          <li>8 cámaras </li>
+                          <li>Monitor de 22 pulgadas para visualizar las cámaras</li>
+                          <li>Dominio panótico para ver las cámaras a través de internet</li>
+                          <li>Alarma en caso de emergencia</li>
+                          <li>Mensaje de texto a titular y llamada al 911</li>
+                      </ul>
+                      <p><strong>Monto de instalación:</strong> $1500</p>
+                      <p><strong>Monto mensual:</strong> $1000</p>
+                      <p><strong>Total a pagar el primer mes:</strong> $2500</p>
+
+                  </div>
+                  <div class="modal-footer">
+                      <a href="#" data-dismiss="modal" class="btn btn-success">Aceptar</a>
+                      <a href="#" data-dismiss="modal" class="btn btn-warning"><span class="glyphicon glyphicon-print"></span> Imprimir</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="dialog-inst" class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <a data-dismiss="modal" class="close">×</a>
+                      <h3>Turno para instalación</h3>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Datos de cliente</h4>
+                      <p><strong>Cliente:</strong> Juan Pérez</p>
+                      <p><strong>Direccion:</strong> Av Sarmiento 993 piso 1 dpto 4</p>
+                      <p><strong>Fecha de visita:</strong> 12-06-2017 23-30</p>
+                      <h4>Datos de servicio</h4>
+                      <p><strong>Servicio elegido:</strong> Estándar</p>
+                      <h3>Fecha y lugar de visita</h3>
+                      <div class="input-group date" id="calendario" data-date-format="dd-mm-yyyy hh-ii">
+                          <input type='text' class="form-control" value="28-06-2017 18-30" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                      <p class="help-block">Utilise el calendario para seleccionar los dias y horarios disponibles.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="turnos - instalaciones.html" class="btn btn-success">Confirmar instalación</a>
+                      <a href="#" data-dismiss="modal" class="btn">Cancelar</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <!-- Barra de navegación superior-->
+    <div class="navbar-wrapper" >
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-top">
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="empresa">
+              <img src="../../img/logo.png" class=" navbar-brand img-thumbnail" style="background:none;border:none" alt="Alternate Text" />
+              <a class="navbar-brand" href="../../inicio.html">Panoptico</a>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation-login">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="../login.html" class="">Cerrar sesion</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+    </div>
+    </div>
+    <!-- /Barra de navegacion superior-->
+    
+    <!-- Contenedor-->
+      <div class="container-fluid">
+          <div class="row">
+              <!-- Barra de navegación lateral-->
+              <nav role="navigation" id="sidebar-opc" class="navbar-default col-sm-3 col-md-2">
+                  <div role="navigation" class="sidebar-collapse" aria-expanded="false">
+                      <ul id="main-menu" class="nav nav-sidebar">
+                          <li class="user-img">
+                              <img class="img-circle" alt="User image" width="100" height="100" src="../../Img/Users/default.png">
+                              <h4 class="text-center">Juan Pérez</h4>
+                              <h4 class="text-center text-muted">(Cliente)</h4>
+                          </li>
+                          <li class=""><a href="index.html">Inicio</a></li>
+                          <li class="dropdown active">
+                              <a class="dropdown-toggle" data-toggle="dropdown">Turnos <span class="caret"></span></a>
+                              <ul class="nav nav-sidebar" style="margin-left:15px">
+                                  <li class="active"><a href="#">Presupuestos</a></li>
+                                  <li><a href="turnos - instalaciones.html">Instalaciones</a></li>
+                                  <li><a href="turnos - consultas.html">Consultas</a></li>
+                              </ul>
+                          </li>
+                          <li class=""><a href="emergencia.html">Emergencias</a></li>
+                      </ul>
+                  </div>
+              </nav>
+              <!-- /Barra de navegación lateral-->
+              <!-- Contenedor lateral-->
+              <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                  <ol class="breadcrumb">
+                      <li class=""><a href="index.html">Inicio</a></li>
+                      <li class="active">Turnos - Presupuestos</li>
+                  </ol>
+                  <div class="container-fluid" style="padding:10px 0px">
+                      <h3 class="sub-header">Resultado de presupuestos</h3>
+                      <a data-toggle="modal" href="#dialog-presup" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Solicitar presupuesto</a>
+                  </div>
+                  <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">Filtrar por:</h3><br>
+                          <form class="form-inline" role="form">
+                              <div class="form-group">
+                                  <label for="column-filter-tipo">Estado:</label>
+                                  <select id="column-filter-tipo" class="form-control">
+                                      <option>Calculados</option>
+                                      <option>Pendientes</option>
+                                      <option>Contratados</option>
+                                  </select>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="panel-body">
+                          <div id="lista-disp" class="table-responsive">
+                              <table class="table table-hover table-striped">
+                                  <thead>
+                                      <tr>
+                                          <th>Direccion</th>
+                                          <th>Fecha de visita</th>
+                                          <th>Acciones</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="disabled btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="disabled btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="disabled btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="disabled btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="disabled btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="disabled btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="disabled btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="disabled btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Av. Sarmiento 993</td>
+                                          <td>12-06-2017 23-30</td>
+                                          <td>
+                                              <div class="opc-tabla-disp">
+                                                  <a data-toggle="modal" href="#dialog-inst">
+                                                      <button rel="tooltip" data-original-title="Aceptar presupuesto" class="disabled btn btn-xs btn-success glyphicon glyphicon-ok"></button>
+                                                  </a>
+                                                  <a data-toggle="modal" href="#dialog-detalles">
+                                                      <button rel="tooltip" data-original-title="Ver detalles" class="disabled btn btn-xs btn-info glyphicon glyphicon-zoom-in"></button>
+                                                  </a>
+                                              </div>
+                                          </td>
+                                      </tr>
+
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      <div class="panel-footer">
+                          <div class="clearfix">
+                              <div class="col-xs-6">
+                                  <p class="text-info">Visualizando 6 de 6 elementos</p>
+                              </div>
+                              <div id="paginacion" class="col-xs-6 ">
+                                  <ul class="pagination pull-right">
+                                      <li class="disabled"><a href="#">&laquo;</a></li>
+                                      <li class="active"><a href="#">1 <span class="sr-only">(página actual)</span></a></li>
+                                      <li class="disabled"><a href="#">&raquo;</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <!-- /Contenedor lateral-->
+      </div>
+      <!-- FOOTER -->
+      <footer class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+      <!-- /FOOTER -->
+    </div>
+    <!-- /Contenedor -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../js/index.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/jquery.metisMenu.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+      <script type="text/javascript" src="../../js/locales/bootstrap-datetimepicker.es.js" charset="UTF-8"></script>
+      <script src="../../js/bootstrap-datepicker.js"></script>
+      <script src="../../js/bootstrap-datetimepicker.js"></script>
+      <script type='text/javascript'>
+              $("#calendario").datetimepicker({
+                  startDate: '2017-06-21',
+                  endDate: '2017-09-21',
+                  startView: 2,
+                  daysOfWeekDisabled: '0,6',
+                  todayHighlight: true,
+                  language: 'es'
+              });
+      </script>
+  </body>
+</html>
