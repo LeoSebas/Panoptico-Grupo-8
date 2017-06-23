@@ -1,0 +1,12 @@
+Aclaraciones:
+- El archivo de inicio de la página es "inicio.html".
+
+- Hicimos las pruebas del sitio con el navegador Chrome, asi que es recomendable
+utilizar ese navegador para evitar errores.
+
+- Para acceder a los paneles de cada usuario listamos a continuación los usuarios y contraseñas
+(La contraseña es igual que su nombre de usuario):
+
+	-Cliente: 		Usuario="cliente@mail.com", 	contraseña="cliente@mail.com".
+	-Tecnico: 		Usuario="tecnico@mail.com", 	contraseña="tecnico@mail.com".
+	-Atencion al cliente: 	Usuario="At-cliente@mail.com", 	contraseña="At-cliente@mail.com".
